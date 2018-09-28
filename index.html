@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Minesweeper</title>
+</head>
+
+<body class="pre-load">
+  <header>
+    <h1>Minesweeper</h1>
+  </header>
+
+  <main>
+    <div class="game-status">
+      <div class="mine-counter">000</div>
+      <div class="game-smiley"></div>
+      <div class="game-timer">000</div>
+    </div>
+
+    <table class="game-table">
+      <tbody class="game-board"></tbody>
+    </table>
+
+    <div class="game-btns">
+      <button data-level="easy">beginner</button>
+      <button data-level="medium">intermediate</button>
+      <button data-level="hard">expert</button>
+      <button data-level="custom">customize</button>
+    </div>
+
+  </main>
+
+  <section class="scoreboard" hidden>
+    <h3>Best Times</h3>
+    <table>
+      <tbody class="score-table">
+        <tr class="hard" hidden>
+          <td class="level">Expert</td>
+          <td><span class="time"></span>s</td>
+          <td class="player"></td>
+        </tr>
+        <tr class="medium" hidden>
+          <td class="level">Intermediate</td>
+          <td><span class="time"></span>s</td>
+          <td class="player"></td>
+        </tr>
+        <tr class="easy" hidden>
+          <td class="level">Beginner</td>
+          <td><span class="time"></span>s</td>
+          <td class="player"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="modal" hidden>
+    <div class="customize-level">
+      <div class="close">☓</div>
+      <form>
+        <div class="customize-level-input">
+          <span>Rows:</span>
+          <input name="rows" required type="number" min="2" max="200" placeholder="2-200" />
+        </div>
+        <div class="customize-level-input">
+          <span>Columns:</span>
+          <input name="cols" required type="number" min="2" max="200" placeholder="2-200" />
+        </div>
+        <div class="customize-level-input">
+          <span>Mines:</span>
+          <input name="mines" type="number" min="1" placeholder="optional" />
+        </div>
+        <div class="customize-level-input customize-level-submit">
+          <input type="submit" value="Customize" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/index.js"></script>
+</body>
+
+</html>

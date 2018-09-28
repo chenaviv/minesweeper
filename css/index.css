@@ -1,0 +1,201 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	transition: opacity 0.3s;
+	background-color: whitesmoke;
+	font-family: 'PT Mono', monospace;
+}
+
+h1 {
+	margin: 1rem 0;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+h3 {
+  margin: .5em 0;
+  font-size: inherit;
+  text-align: center;
+}
+
+.pre-load {
+	opacity: 0;
+}
+
+main {
+	width: fit-content;
+	margin: auto;
+	padding: 1rem;
+	background-color: #fafafa;
+	border: 2px dotted #c2c2c2;
+}
+
+.game-status {
+	display: flex;
+	justify-content: space-between;
+	font-size: 2rem;
+	color: #ef5350;
+	/* max-width: calc(100vw - 2rem); */
+}
+
+.game-smiley {
+	cursor: pointer;
+}
+
+.game-table {
+	margin: auto;
+	border: 3px outset;
+	font-weight: 700;
+	border-spacing: 0;
+	user-select: none;
+}
+
+.game-table .cell {
+	border: 3px outset;
+	background-color: #c2c2c2;
+	min-width: 2rem;
+	max-width: 2rem;
+	height: 2rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.game-table .marked {
+	line-height: 1.5rem;
+}
+
+.game-table.sm-cells .cell {
+	min-width: 1.3rem;
+	max-width: 1.3rem;
+	height: 1.3rem;
+	font-size: 0.9rem;
+}
+
+.game-table.sm-cells .mine {
+	font-size: 0.6rem;
+}
+.game-table.sm-cells .marked {
+	font-size: 0.5rem;
+	line-height: 0.5rem;
+}
+
+.game-table .cell.revealed {
+	border: 1px solid #f2f2f2;
+	background-color: #e4e4e4;
+	cursor: default;
+}
+
+.game-table .cell.boom {
+	background-color: red;
+}
+
+.count-1 {
+	color: blue;
+}
+.count-2 {
+	color: green;
+}
+.count-3 {
+	color: tomato;
+}
+.count-4 {
+	color: navy;
+}
+.count-5 {
+	color: darkred;
+}
+.count-6 {
+	color: #00bcd4;
+}
+.count-7 {
+	color: black;
+}
+.count-8 {
+	color: gray;
+}
+
+.game-btns {
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: center;
+}
+
+.game-btns button {
+	cursor: pointer;
+	outline: none;
+	background-color: #e4e4e4;
+	padding: 5px;
+	margin-right: 2px;
+}
+
+.scoreboard {
+  margin: 0.8rem 0;
+  font-size: .7rem;
+}
+
+.scoreboard table {
+  margin: auto;
+}
+
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background-color: rgba(17, 37, 10, 0.5);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.modal.shown {
+  opacity: 1;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.customize-level {
+  position: relative;
+	margin-bottom: 150px;
+	box-shadow: -2px 2px 5px 2px #4a4a4a;
+	padding: 2rem;
+	background-color: #c2c2c2;
+}
+
+.customize-level .close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.customize-level-input {
+  margin: 0 0 .5rem 0;
+}
+
+.customize-level-input span {
+  display: inline-block;
+  width: 5.5rem;
+}
+.customize-level-input input {
+  width: 4rem;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.customize-level-submit {
+  margin: 1rem 0 0 0;
+}
+
+.customize-level-submit input {
+  width: 100%;
+  cursor: pointer;
+}
